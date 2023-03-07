@@ -11,16 +11,16 @@ background: #eee;
 } */
 /* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap");
-
+a{
+  text-decoration: none;
+}
 body {
   line-height: 1.8;
   color: #2C74B3;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
 }
-a{
-  text-decoration: none;
-}
+
 a {
   font-weight: 700;
   transition: all 0.4s ease;
@@ -110,3 +110,6 @@ footer .footer-links a:hover {
   color: #301e67;
 }
 
+a{
+  text-decoration: none;
+}
