@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import users from '../models/user.js';
 import { validationResult } from "express-validator"
 import bcrypt from "bcrypt";
+import nodeRSA from 'node-rsa';
 
 export const signup = async (req, res) => {
   console.log(req.body)
@@ -15,13 +16,15 @@ export const signup = async (req, res) => {
       });
     }
     const hashedPassword = await bcrypt.hash(password, 10);
+    const key = new nodeRSA(hashedPassword , {b: 512});
+    const publicKey = key.exportKey('public');
+    const privateKey = key.exportKey('private');
     try {
       // const user = new users(req.body);
-      const savedUser = await users.create({ username, email, password: hashedPassword });
+      const savedUser = await users.create({ username, email, password: hashedPassword, publicKey });
+
       return res.json({
-        username: savedUser.username,
-        email: savedUser.email,
-        password: savedUser.password,
+        privateKey: privateKey
       });
     } catch (error) {
       console.log(error)
