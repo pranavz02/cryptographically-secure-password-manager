@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="index.html">Ensemble</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="passwordvault.html">Password Vault</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Log In</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="home">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <h1 class="display-4">Password Management from Anywhere</h1>
+            <p class="justify-content-center">
+              <strong
+                >Life is happening online. Work. Play. Family and friends.
+                LastPass puts your digital life at your fingertips, simply and
+                securely.</strong
+              >
+            </p>
+            <div class="btn-row">
+              <div class="col-sm-12 text-center">
+                <a href="login.html">
+                  <button
+                    id="btnpersonal"
+                    class="btn btn-primary btn-md center-block"
+                    style="width: 200px"
+                    OnClick="btnSearch_Click"
+                  >
+                    Personal
+                  </button>
+                </a>
+                <button
+                  id="btnbusiness"
+                  class="btn btn-danger btn-md center-block"
+                  style="width: 200px"
+                  OnClick="btnClear_Click"
+                >
+                  Business
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-12" section-intro>
+            <h1>
+              Auto-pilot for all your passwords
+            </h1>
+            <p> <i> Ensemble removes obstacles, letting you get back to the things you love most.</i></p>
+            <div class="hline"></div>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="feature-box col-lg-4">
+            <i class="fa-solid fa-right-to-bracket fa-3x"></i>
+            <h5><strong>Log In and go</strong></h5>
+            <p>
+              Once you save a password in LastPass, you'll always have it when you
+              need it; logging in is fast and easy.
+            </p>
+          </div>
+          <div class="feature-box col-lg-4 ">
+            <i class="fa-solid fa-hand-pointer fa-3x"></i>
+            <h5><strong>Passwordless login</strong></h5>
+            <p>
+              Gain instant access to your LastPass vault by using the LastPass
+              Authenticator instead of your master password.
+            </p>
+          </div>
+          <div class="feature-box col-lg-4">
+            <i class="fa-solid fa-user-lock fa-3x"></i>
+            <h5><strong>Strong passwords</strong></h5>
+            <p>
+              The built-in password generator creates long, randomized passwords
+              that protect against hacking.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="feature-box col-lg-4">
+            <i class="fa-solid fa-file-shield fa-3x "></i>
+            <h5><strong>Store digital records</strong></h5>
+            <p>
+              Insurance cards, memberships, Wi-Fi passwords... keep all your notes safe and easy to find.
+            </p>
+          </div>   
+          <div class="feature-box col-lg-4">
+            <i class="fa-solid fa-share fa-3x"></i>
+            <h5><strong>Share effortlessly</strong></h5>
+            <p>
+              Some things shouldn't be sent in a text. Conveniently and safely share
+              passwords and notes with anyone.
+            </p>
+          </div>
+          <div class="feature-box col-lg-4 ">
+            <i class="fa-solid fa-laptop fa-3x"></i>
+            <h5><strong>Dark web monitoring</strong></h5>
+            <p>
+              Stop worrying about data breaches. Get alerts if your personal
+              information is at risk.
+        </div>
+  
+        
+          </p>
+        </div>
+      </div>
+     
+    </section>
+
+<!-- Testimonials Section -->
+
+<section id="testimonials" class="text-center">
+    <div class="container">
+       <div class="row">
+          <div class="col-12">
+
+             <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                     <img src="Images/user1.jfif" alt="">
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                   <img src="Images/user2.jfif" alt="">
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                   <img src="Images/user3.jfif" alt="">
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                   <div class="review">
+                      <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      </div>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea explicabo nisi quia blanditiis assumenda quos veritatis sit deleniti porro nulla temporibus deserunt, iure in labore incidunt quis eos. Accusamus sed excepturi architecto.</p>
+                      <h5 class="title-sm mb-0">John Doe</h5>
+                      <small>Web Developer</small>
+                   </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                   <div class="review">
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea explicabo nisi quia blanditiis assumenda quos veritatis sit deleniti porro nulla temporibus deserunt, iure in labore incidunt quis eos. Accusamus sed excepturi architecto.</p>
+                      <h5 class="title-sm mb-0">John Doe</h5>
+                      <small>Web Designer</small>
+                   </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                   <div class="review">
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea explicabo nisi quia blanditiis assumenda quos veritatis sit deleniti porro nulla temporibus deserunt, iure in labore incidunt quis eos. Accusamus sed excepturi architecto.</p>
+                      <h5 class="title-sm mb-0">John Doe</h5>
+                      <small>Blockchain Developer</small>
+                   </div>
+                </div>
+              </div>
+          </div>
+       </div>
+    </div>
+ </section>
+
+ <footer>
+  <div class="footer-top">
+     <div class="container">
+        <div class="row gy-5">
+           <div class="col-md-4">
+              <h4 class="logo-text">Ensemble</h4>
+              <p>Praesent vulputate neque nec sem fermentum porttitor. Mauris eget dolor convallis, trista, dignissim sapien. Duis vel felis dictu</p>
+                           
+<div class="social-icons">
+  <a href="#">
+      <i class="fa-brands fa-facebook "></i>
+  </a>
+  <a href="#">
+      <i class="fa-brands fa-square-twitter "></i>
+  </a>
+  <a href="#">
+      <i class="fa-brands fa-github  "></i>
+  </a>
+  <a href="#">
+      <i class="fa-brands fa-square-instagram "></i>
+  </a>
+</div>
+           </div>
+           <div class="col-md-2">
+              <h5 class="title-sm">Navigation</h5>
+              <div class="footer-links">
+                 <a href="index.html">Home</a>
+                 <a href="passwordvault.html">Password Vault</a>
+                 <a href="#">Features</a>
+                 <a href="#">Testimonials</a>
+                 <a href="login.html">Log In</a>
+              </div>
+           </div>
+           <div class="col-md-2">
+              <h5 class="title-sm">More</h5>
+              <div class="footer-links">
+                 <a href="#">FAQ's</a>
+                 <a href="#">Privacy & Policy</a>
+                 <a href="#">Liscences</a>
+              </div>
+           </div>
+           <div class="col-md-2">
+              <h5 class="title-sm">Contact</h5>
+              <div class="footer-links">
+                 <p class="mb-0">1649 Norman Street, Los Angeles, 9001</p>
+                 <p class="mb-0">8(800)316-06-42</p>
+                 <p class="mb-0">hello@yourdomain.com</p>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="footer-bottom">
+     <div class="container">
+        <div class="row justify-content-between gy-3">
+           <div class="col-md-6">
+              <p class="mb-0">© Agency2021. All rights reserved</p>
+           </div>
+           <div class="col-auto">
+              <p class="mb-0">Created with ❤️ by SA7MAN</p>
+           </div>
+        </div>
+     </div>
+  </div>
+</footer>
+
+    <script src="https://kit.fontawesome.com/377fe1ec7b.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

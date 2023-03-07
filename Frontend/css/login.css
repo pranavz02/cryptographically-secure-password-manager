@@ -1,0 +1,112 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+/* .fb-button{
+    padding-bottom: 5px;
+} */
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap");
+
+body {
+  line-height: 1.8;
+  color: #2C74B3;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+a {
+  font-weight: 700;
+  transition: all 0.4s ease;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #301e67;
+}
+
+
+img {
+  width: 100%;
+}
+small {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.navbar .nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #b6eada;
+}
+
+/* Home Page */
+.logo-text {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #301e67 !important;
+}
+#home {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.footer-top {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-links a,
+footer .social-icons a {
+  color: #2C74B3;
+}
+
+footer .social-icons a {
+  font-size: 24px;
+}
+
+footer .footer-links a {
+  display: block;
+  font-weight: 400;
+}
+
+footer .social-icons a:hover,
+footer .footer-links a:hover {
+  color: #301e67;
+}
+
