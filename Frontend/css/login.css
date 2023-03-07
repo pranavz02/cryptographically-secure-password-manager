@@ -1,3 +1,7 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap");
+
+
 .divider:after,
 .divider:before {
 content: "";
@@ -9,11 +13,7 @@ background: #eee;
 /* .fb-button{
     padding-bottom: 5px;
 } */
-/* Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap");
-a{
-  text-decoration: none;
-}
+
 body {
   line-height: 1.8;
   color: #2C74B3;
