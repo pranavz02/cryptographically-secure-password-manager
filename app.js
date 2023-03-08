@@ -11,6 +11,7 @@ app.use('/auth', authRoutes);
 app.use('/static', express.static(path.join('static')));
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: true}));
+const __dirname = path.resolve();
 
 // My Routes
 app.get('/', (req, res) => {
@@ -18,11 +19,10 @@ app.get('/', (req, res) => {
       message: `Server is up and running on port ${process.env.PORT || 8000}`,
     });
 });
+
 app.get('/auth/signup', (req, res) => {
-    res.status(200).json({
-      message: `Signup page ready`,
+  res.sendFile('/public/form.html',{ root : __dirname})
     });
-});
 
 // Starting the server
 app.listen(port, () => {
