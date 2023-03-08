@@ -5,10 +5,9 @@ import bcrypt from "bcrypt";
 import nodeRSA from 'node-rsa';
 
 export const signup = async (req, res) => {
-  console.log(req.body)
-  const  username = req.body.username;
-  const  email = req.body.email;
-  const password = req.body.password;
+    console.log(req.body);
+    const { username, email, password } = req.body;
+    
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({
@@ -16,7 +15,7 @@ export const signup = async (req, res) => {
       });
     }
     const hashedPassword = await bcrypt.hash(password, 10);
-    const key = new nodeRSA(hashedPassword , {b: 512});
+    const key = new nodeRSA(hashedPassword , {b: 512}, '');
     const publicKey = key.exportKey('public');
     const privateKey = key.exportKey('private');
     try {
@@ -24,6 +23,8 @@ export const signup = async (req, res) => {
       const savedUser = await users.create({ username, email, password: hashedPassword, publicKey });
 
       return res.json({
+        username: savedUser.username,
+        email: savedUser.email,
         privateKey: privateKey
       });
     } catch (error) {
@@ -36,7 +37,8 @@ export const signup = async (req, res) => {
 };
 
 export const signin = async (req, res) => {
-    const { email, password } = req.body;
+    const { password } = req.body;
+    const email = req.body.email;
     try {
       const errors = validationResult(req);
   
@@ -46,7 +48,7 @@ export const signin = async (req, res) => {
           message: errors.array()[0].msg,
         };
       }
-      const user = await users.findOne({ email: req.body.email });
+      const user = await users.findOne({ email: email });
       if (!user) {
         throw {
           statusCode: 400,

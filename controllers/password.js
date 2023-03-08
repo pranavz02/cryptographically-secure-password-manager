@@ -28,5 +28,16 @@ export const addPassword = async (req, res) => {
           error
             // 'NOT able to save the user in database. Potential reason could be - Email already exists',
         });
-      }
+    }
+}
+
+
+export const editPass = async (req, res) => {
+    const { privateKey } = req.body;
+    
+}
+
+export const deletePass = async (req, res) => {
+    const { privateKey } = req.body;
+    
 }

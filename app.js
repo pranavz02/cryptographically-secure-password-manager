@@ -7,12 +7,12 @@ import path from "path";
 import authRoutes from './routes/auth.js';
 
 
-app.use('/auth', authRoutes);
 app.use('/static', express.static(path.join('static')));
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: true}));
 const __dirname = path.resolve();
 
+app.use('/auth', authRoutes);
 // My Routes
 app.get('/', (req, res) => {
     res.status(200).json({
