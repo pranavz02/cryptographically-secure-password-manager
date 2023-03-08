@@ -6,16 +6,15 @@ sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
 
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
+// sign_in_btn.addEventListener("click", () => {
+//   container.classList.remove("sign-up-mode");
+// });
 
 
 
 
 const form = document.getElementById("reg-form");
-
-form.addEventListener('submit', async (Event) => {
+form.addEventListener('signup', async (Event) => {
     Event.preventDefault();
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
@@ -29,7 +28,7 @@ form.addEventListener('submit', async (Event) => {
         body: JSON.stringify({
             username, email, password
         })
-    }).then((res) => res.json())
+    }).then((req, res) => res.json())
 
     console.log(result);
 });
