@@ -6,19 +6,20 @@ sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
 
-// sign_in_btn.addEventListener("click", () => {
-//   container.classList.remove("sign-up-mode");
-// });
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
 
 
 
 
 const form = document.getElementById("reg-form");
-form.addEventListener('signup', async (Event) => {
+form.addEventListener('submit', async (Event) => {
     Event.preventDefault();
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
 
     const result = await fetch('/auth/signup', {
         method: 'POST',
@@ -28,7 +29,7 @@ form.addEventListener('signup', async (Event) => {
         body: JSON.stringify({
             username, email, password
         })
-    }).then((req, res) => res.json())
+    }).then((res) => res.json())
 
     console.log(result);
 });

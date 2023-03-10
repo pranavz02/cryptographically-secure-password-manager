@@ -15,7 +15,7 @@ export const signup = async (req, res) => {
       });
     }
     const hashedPassword = await bcrypt.hash(password, 10);
-    const key = new nodeRSA(hashedPassword , {b: 512}, '');
+    const key = new nodeRSA({b: 512});
     const publicKey = key.exportKey('public');
     const privateKey = key.exportKey('private');
     try {
@@ -48,7 +48,7 @@ export const signin = async (req, res) => {
           message: errors.array()[0].msg,
         };
       }
-      const user = await users.findOne({ email: email });
+      const user = await users.findOne({ email: req.body.email });
       if (!user) {
         throw {
           statusCode: 400,
