@@ -10,9 +10,24 @@
     <link rel="stylesheet" href="/static/style.css" />
     <title>Home</title>
     <!-- Swiper JS -->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-   <!-- Initialize Swiper -->
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -157,24 +172,10 @@
 
 <!-- Testimonials Section -->
 
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
+
 
 <section id="testimonials" class="text-center">
-    <div class=" swiper mySwiper tcontainer">
+    <div class=" swiper mySwiper container box">
      <div class="content swiper-wrapper">
       <div class=" swiper-slide card">
         <div class="card-content">
@@ -216,7 +217,7 @@
 
           </div>
           <div class="name-profession">
-            <span class="name">Someone Name</span>
+            <span class="name">Someonesfsf Name</span>
             <span class="profession"> WEb developer</span>
           </div>
           <div class="rating">
@@ -248,7 +249,7 @@
           </div>
           <div class="name-profession">
             <span class="name">Someone Name</span>
-            <span class="profession"> WEb developer</span>
+            <span class="profession"> WEb devdfdfeloper</span>
           </div>
           <div class="rating">
             <i class="fa-solid fa-star"></i>
